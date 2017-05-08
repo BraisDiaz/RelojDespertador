@@ -11,7 +11,7 @@ package relojdespertador;
 */
 public class Display {
     
-    boolean ledClock, ledAlarm, ledSet;
+    static boolean ledClock, ledAlarm, ledSet;
 
     
     /**
@@ -30,6 +30,8 @@ public class Display {
     * @param showSet si está en true se enciende el led del set, false se apaga.
     */
     public static void showLeds(boolean showClock, boolean showAlarm, boolean showSet){
-        
+        ledClock = showClock;
+        ledAlarm = showAlarm;
+        ledSet = showSet;        
     }    
 }
