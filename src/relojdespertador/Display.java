@@ -19,7 +19,7 @@ public class Display {
     */
     public static void showHr(){
         
-        System.out.println("Mostraría la hora y minutos actuales");
+        System.out.println(RelojDespertador.horaActual.getHour() + RelojDespertador.horaActual.getMinute());
         
     }
     

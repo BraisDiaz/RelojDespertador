@@ -1,6 +1,8 @@
 
 package relojdespertador;
 
+import java.time.LocalTime;
+
 /**
  *
  * @author Brais Núñez
@@ -42,14 +44,24 @@ public class Botonera {
     }
     /**
      * Aumenta los minutos.
+     * @param auxHr recibe la hora actual de la hora local
      */
-    public static void plusHr(){
-        
+    public static void plusHr(LocalTime auxHr){
+      
+        auxHr.plusHours(1);
+        Display.showHr();
+        RelojDespertador.horaActual.plusHours(1);
+       
     }
     /**
      * Aumenta las horas.
+     * @param auxMin recibe los minutos actuales de la hora local
      */
-    public static void plusMin(){
+    public static void plusMin(LocalTime auxMin){
+        
+        auxMin.plusMinutes(1);
+        Display.showHr();
+        RelojDespertador.horaActual.plusMinutes(1);
         
     }
     /**
@@ -57,8 +69,5 @@ public class Botonera {
      */
     public static void stopAlarma(){
         
-    }
-   
-    
-    
+    }    
 }
